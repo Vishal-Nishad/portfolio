@@ -38,20 +38,10 @@ export default function Greeting() {
               </p>
               <div id="resume" className="empty-div"></div>
               <SocialMedia />
-              <div className="button-greeting-div">
-                <Button text="Contact me" href="#contact" />
-                {greeting.resumeLink && (
-                  <a
-                    href={require("./resume.pdf")}
-                    download="Resume.pdf"
-                    className="download-link-button"
-                  >
-                    <Button text="Download my resume" />
-                  </a>
-                )}
-              </div>
+              {/* ✅ BUTTONS REMOVED FROM HERE */}
             </div>
           </div>
+
           <div className="greeting-image-div">
             {illustration.animated ? (
               <DisplayLottie animationData={landingPerson} />
@@ -61,7 +51,21 @@ export default function Greeting() {
                 src={require("../../assets/images/manOnTable.svg")}
               ></img>
             )}
+            {/* ✅ BUTTONS ADDED HERE — below the animation */}
+            <div className="button-greeting-div">
+              <Button text="Contact me" href="#contact" />
+              {greeting.resumeLink && (
+                <a
+                  href={require("./resume.pdf")}
+                  download="Resume.pdf"
+                  className="download-link-button"
+                >
+                  <Button text="Download my resume" />
+                </a>
+              )}
+            </div>
           </div>
+
         </div>
       </div>
     </Fade>
