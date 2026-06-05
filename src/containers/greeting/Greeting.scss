@@ -6,11 +6,12 @@
   margin: 0px auto;
   margin-top: 4rem;
 }
+
 .greet-main {
   width: 90%;
   padding: 20px 10px;
   margin: 0px auto;
-  margin-top: 2rem;
+  margin-top: -1rem;
 }
 
 .greeting-main {
@@ -19,10 +20,6 @@
 
 .subTitle {
   color: $subTitle !important;
-}
-
-.greeting-main {
-  display: flex;
 }
 
 .greeting-main > * {
@@ -34,10 +31,6 @@
   margin-bottom: 40px;
 }
 
-.button-greeting-div {
-  display: flex;
-  margin-top: 40px;
-}
 .download-link-button {
   text-decoration: none;
 }
@@ -58,6 +51,25 @@
   height: auto;
 }
 
+.greeting-image-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  animation: fadeInRight 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+/* ✅ BUTTONS RULE — defined BEFORE media queries so mobile can override */
+.button-greeting-div {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+}
+
 .wave-emoji {
   animation-duration: 1.8s;
   animation-iteration-count: infinite;
@@ -67,30 +79,30 @@
 }
 
 @keyframes wave {
+  0%   { transform: rotate(0deg); }
+  10%  { transform: rotate(-10deg); }
+  20%  { transform: rotate(12deg); }
+  30%  { transform: rotate(-10deg); }
+  40%  { transform: rotate(9deg); }
+  50%  { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
+}
+
+@keyframes fadeInRight {
   0% {
-    transform: rotate(0deg);
+    opacity: 0;
+    transform: translateX(60px) scale(0.97);
   }
-  10% {
-    transform: rotate(-10deg);
-  }
-  20% {
-    transform: rotate(12deg);
-  }
-  30% {
-    transform: rotate(-10deg);
-  }
-  40% {
-    transform: rotate(9deg);
-  }
-  50% {
-    transform: rotate(0deg);
+  60% {
+    opacity: 1;
   }
   100% {
-    transform: rotate(0deg);
+    opacity: 1;
+    transform: translateX(0) scale(1);
   }
 }
 
-/* Media Query */
+/* ✅ MEDIA QUERIES — after base rules so they properly override */
 @media (max-width: 1380px) {
   .greeting-text {
     font-size: 50px;
@@ -99,10 +111,8 @@
     font-size: 20px;
   }
 }
+
 @media (max-width: 768px) {
-  .button-greeting-div {
-    justify-content: space-around;
-  }
   .greeting-text {
     font-size: 30px;
     text-align: center;
@@ -116,7 +126,16 @@
     display: block;
   }
   .greeting-image-div {
-    height: 256px;
+    height: auto;
+    justify-content: center;
+    flex-direction: column;
+  }
+  /* ✅ This now correctly overrides the absolute rule above */
+  .button-greeting-div {
+    position: static;
+    justify-content: center;
+    margin-top: 16px;
+    width: 100%;
   }
 }
 
