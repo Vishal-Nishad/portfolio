@@ -134,10 +134,11 @@ const workExperiences = {
     {
       role: "Associate Software Engineer",
       company: "Quicket Solutions",
-      companylogo: require("./assets/images/facebookLogo.png"),
+      companylogo: require("./assets/images/quicket_solutions.jpg"),
+      bannerColor: "#007bff",
       date: "May 2025 – Present",
       desc: "Working as a Backend Engineer, contributing to the digitization of U.S. government ecosystems-including law enforcement, judiciary systems, court workflows, and citation payment platforms-by building scalable cloud-native solutions using Python, JavaScript, AWS serverless technologies, and distributed event-driven microservices architectures.",
-      descBulletsTitle: "Some impactful work I have done:",
+      descBulletsTitle: "Below are some contributions I have made:",
       descBullets: [
         "Resolved critical 502 gateway failures and Web2Py throughput bottlenecks in the Crash Reporting module by offloading crash image processing, XML/PDF generation, and JSON schema validation to AWS Lambda, and migrating file workflows to AWS S3 using signed and pre-signed POST URLs - improving response reliability and reducing processing errors by ~99.9%. ",
         "Built a centralized composite-based JSON validation framework inspired by Pydantic, replacing large if-else validation chains and cutting validation-related bugs while improving scalability and long-term maintainability.",
@@ -176,30 +177,64 @@ const openSource = {
 // Some big projects you have worked on
 
 const bigProjects = {
-  title: "Big Projects",
-  subtitle: "PROJECTS I HAVE WORKED ON",
+  // title: "Big Projects",
+  // subtitle: "PROJECTS I HAVE WORKED ON",
+
+  title: "Projects",
   projects: [
     {
-      image: require("./assets/images/saayaHealthLogo.webp"),
-      projectName: "Project One",
+      image: require("./assets/images/styfinder_logo.png"),
+      projectName: "StayFinder",
       projectDesc:
-        "Built scalable backend systems and workflows for high-volume platform operations.",
+        "StayFinder is a production-oriented Airbnb-like booking platform built with a scalable monolith-first architecture using FastAPI and Docker, designed for future microservice extraction. The project focuses on real-world backend engineering concepts including secure authentication, geospatial search, async processing, caching, and distributed-system-ready architecture.",
+      descBulletsTitle: "Key engineering concepts and implementations:",
+      descBullets: [
+        "Designed a monolith-first booking platform using FastAPI and Docker, applying 6+ LLD design patterns (Observer, Strategy, Factory) across modular services with Pydantic schemas and Alembic migrations, designed for microservice extraction.",
+        "Implemented production-grade auth with RS256 JWT rotation, Argon2id hashing, and Redis-backed caching for rate limiting and session management; integrated MinIO-based file storage with pre-signed URLs mirroring AWS S3 behavior.",
+        "Built geospatial property search using PostgreSQL + PostGIS with ST_DWithin radius queries via SQLAlchemy, enabling users to discover nearby listings within configurable distances."
+      ],
       footerLink: [
         {
+          name: "Github Repo",
+          url: "http://saayahealth.com/"
+        },
+        {
           name: "Visit Website",
+          url: ""
+        }
+      ]
+    },
+    {
+      image: require("./assets/images/movie_recommendation.webp"),
+      projectName: "Movie Recommendation System",
+      projectDesc:
+        "Built a hybrid Movie Recommendation System using collaborative and content-based filtering techniques with cosine similarity scoring, trained on 10,000+ movies and 50,000+ user ratings using Scikit-learn, Pandas, and NumPy. Designed an end-to-end recommendation pipeline from data preprocessing and feature engineering to frontend integration, delivering personalized movie suggestions based on user preferences and content similarity.",
+      descBulletsTitle: "Key engineering concepts and implementations:",
+      descBullets: [
+        "Built a hybrid movie recommendation engine using collaborative and content-based filtering with cosine similarity scoring, trained on 10,000 movies and 50,000 user ratings using Scikit-learn, Pandas, and NumPy.",
+        "Designed end-to-end pipeline from data preprocessing to an HTML/CSS frontend, delivering personalized movie suggestions based on user viewing patterns and content similarity."
+      ],
+      footerLink: [
+        {
+          name: "Report Link",
           url: "http://saayahealth.com/"
         }
       ]
     },
     {
-      image: require("./assets/images/nextuLogo.webp"),
-      projectName: "Project Two",
+      image: require("./assets/images/Expense_tracker.png"),
+      projectName: "Expense Management System",
       projectDesc:
-        "Worked on distributed services, APIs, and cloud-native platform integrations.",
+        "Built a scalable 3-tier Expense Management System integrating FastAPI, React.js, and MySQL with RESTful APIs, implementing end-to-end full-stack workflows, authentication, CRUD operations, and modular backend architecture following OOP principles. Designed interactive analytics dashboards with graphical monthly and custom date-range expense insights for financial tracking and reporting.",
+      descBulletsTitle: "Key engineering concepts and implementations:",
+      descBullets: [
+        "Built a 3-tier Expense Management System integrating FastAPI, React.js, and MySQL with REST API communication-demonstrating end-to-end full-stack development, CRUD operations  and OOPs Practice.",
+        "Designed an analytics dashboard to visualize monthly and custom date-wise trends using graphs and charts."
+      ],
       footerLink: [
         {
-          name: "Visit Website",
-          url: "http://nextu.se/"
+          name: "Github Repo",
+          url: "https://github.com/Vishal-Nishad/Project--Expense_Management_System"
         }
       ]
     }
@@ -217,50 +252,41 @@ const achievementSection = {
 
   achievementsCards: [
     {
-      title: "Google Code-In Finalist",
+      title: "Runner-up at TechRace",
       subtitle:
-        "First Pakistani to be selected as Google Code-in Finalist from 4000 students from 77 different countries.",
-      image: require("./assets/images/codeInLogo.webp"),
-      imageAlt: "Google Code-In Logo",
+        "Secured 2nd place in the Tech Race Coding Competition organized by Gurugram University, competing against 24 participating college teams.",
+      image: require("./assets/images/gurugram_university.jpg"),
+      imageAlt: "gurugram_university",
       footerLink: [
         {
-          name: "Certification",
-          url: "https://drive.google.com/file/d/0B7kazrtMwm5dYkVvNjdNWjNybWJrbndFSHpNY2NFV1p4YmU0/view?usp=sharing"
-        },
-        {
           name: "Award Letter",
-          url: "https://drive.google.com/file/d/0B7kazrtMwm5dekxBTW5hQkg2WXUyR3QzQmR0VERiLXlGRVdF/view?usp=sharing"
+          url: "https://drive.google.com/file/d/1GalvwbwnESoKh4gwokYXUwVlu37WEm4Z/view?pli=1"
         },
-        {
-          name: "Google Code-in Blog",
-          url: "https://opensource.googleblog.com/2019/01/google-code-in-2018-winners.html"
-        }
       ]
     },
     {
-      title: "Google Assistant Action",
+      title: "Python: Beginner to Advanced",
       subtitle:
-        "Developed a Google Assistant Action JavaScript Guru that is available on 2 Billion devices world wide.",
-      image: require("./assets/images/googleAssistantLogo.webp"),
-      imageAlt: "Google Assistant Action Logo",
+        "Completed the “Python: Beginner to Advanced” course by CodeBasics, covering core Python programming, OOP concepts, data structures, and advanced problem-solving techniques.",
+      image: require("./assets/images/code_basics.jpg"),
+      imageAlt: "",
       footerLink: [
         {
-          name: "View Google Assistant Action",
-          url: "https://assistant.google.com/services/a/uid/000000100ee688ee?hl=en"
+          name: "Certification",
+          url: "https://codebasics.io/certificate/CB-48-518044"
         }
       ]
     },
 
     {
-      title: "PWA Web App Developer",
-      subtitle: "Completed Certifcation from SMIT for PWA Web App Development",
-      image: require("./assets/images/pwaLogo.webp"),
-      imageAlt: "PWA Logo",
+      title: "DBMS & SQL Course ",
+      subtitle: "Completed Scaler’s DBMS & SQL course, gaining hands-on experience in advanced SQL, relational database design, query optimization, indexing, and backend database engineering concepts.",
+      image: require("./assets/images/scaler.png"),
+      imageAlt: "scaler Logo",
       footerLink: [
-        {name: "Certification", url: ""},
         {
-          name: "Final Project",
-          url: "https://pakistan-olx-1.firebaseapp.com/"
+          name: "Certification",
+          url: "https://moonshot.scaler.com/s/sl/aFyxPvQUId"
         }
       ]
     }
