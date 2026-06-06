@@ -132,30 +132,36 @@ const workExperiences = {
   display: true, //Set it to true to show workExperiences Section
   experience: [
     {
-      role: "Software Engineer",
-      company: "Facebook",
+      role: "Associate Software Engineer",
+      company: "Quicket Solutions",
       companylogo: require("./assets/images/facebookLogo.png"),
-      date: "June 2018 – Present",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      date: "May 2025 – Present",
+      desc: "Working as a Backend Engineer, contributing to the digitization of U.S. government ecosystems-including law enforcement, judiciary systems, court workflows, and citation payment platforms-by building scalable cloud-native solutions using Python, JavaScript, AWS serverless technologies, and distributed event-driven microservices architectures.",
+      descBulletsTitle: "Some impactful work I have done:",
       descBullets: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+        "Resolved critical 502 gateway failures and Web2Py throughput bottlenecks in the Crash Reporting module by offloading crash image processing, XML/PDF generation, and JSON schema validation to AWS Lambda, and migrating file workflows to AWS S3 using signed and pre-signed POST URLs - improving response reliability and reducing processing errors by ~99.9%. ",
+        "Built a centralized composite-based JSON validation framework inspired by Pydantic, replacing large if-else validation chains and cutting validation-related bugs while improving scalability and long-term maintainability.",
+        "Architected and developed a new range-batch based ticket leasing system, eliminating duplicate ticket allocation, resolving race conditions, and fully automating yearly ticket rollover workflows with zero manual operational effort.",
+        "Stabilized the legacy ticket leasing platform by implementing idempotency for ticket reconciliation in offline/mobile sync scenarios to prevent stale ticket reuse and duplicate allocations across distributed devices; introduced retry mechanisms, MySQL GET_LOCK concurrency controls, and proactive monitoring via CloudWatch and Slack integrations to detect ticket pool exhaustion.",
+        "Designed and implemented a configurable rule-engine platform using contract-driven JSON schemas to standardize citation and court-hearing workflows across .NET and Android applications for multi-county clients; also built TDD-based rule validation, automated test suites, and internal QA/dev tools for managing rules, metadata, and testing new builds safely and efficiently.",
+        "Worked on a FastAPI-based US courts ticket payment platform and external service integrations including LEADER Tracker and Spillman, using event-driven AWS microservices built with SNS, SQS, DLQ, and Lambda.",
+        "Automated population of 350+ crash-report fields across 15+ real-world accident scenarios for Crash client IDOT certification, cutting manual data entry time by ~95% and significantly reducing manual effort for support and onboarding teams."
       ]
     },
-    {
-      role: "Front-End Developer",
-      company: "Quora",
-      companylogo: require("./assets/images/quoraLogo.png"),
-      date: "May 2017 – May 2018",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    },
-    {
-      role: "Software Engineer Intern",
-      company: "Airbnb",
-      companylogo: require("./assets/images/airbnbLogo.png"),
-      date: "Jan 2015 – Sep 2015",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    }
+    // {
+    //   role: "Front-End Developer",
+    //   company: "Quora",
+    //   companylogo: require("./assets/images/quoraLogo.png"),
+    //   date: "May 2017 – May 2018",
+    //   desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    // },
+    // {
+    //   role: "Software Engineer Intern",
+    //   company: "Airbnb",
+    //   companylogo: require("./assets/images/airbnbLogo.png"),
+    //   date: "Jan 2015 – Sep 2015",
+    //   desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    // }
   ]
 };
 
@@ -171,24 +177,25 @@ const openSource = {
 
 const bigProjects = {
   title: "Big Projects",
-  subtitle: "SOME STARTUPS AND COMPANIES THAT I HELPED TO CREATE THEIR TECH",
+  subtitle: "PROJECTS I HAVE WORKED ON",
   projects: [
     {
       image: require("./assets/images/saayaHealthLogo.webp"),
-      projectName: "Saayahealth",
-      projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      projectName: "Project One",
+      projectDesc:
+        "Built scalable backend systems and workflows for high-volume platform operations.",
       footerLink: [
         {
           name: "Visit Website",
           url: "http://saayahealth.com/"
         }
-        //  you can add extra buttons here.
       ]
     },
     {
       image: require("./assets/images/nextuLogo.webp"),
-      projectName: "Nextu",
-      projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      projectName: "Project Two",
+      projectDesc:
+        "Worked on distributed services, APIs, and cloud-native platform integrations.",
       footerLink: [
         {
           name: "Visit Website",
@@ -197,7 +204,7 @@ const bigProjects = {
       ]
     }
   ],
-  display: true // Set false to hide this section, defaults to true
+  display: true
 };
 
 // Achievement Section
