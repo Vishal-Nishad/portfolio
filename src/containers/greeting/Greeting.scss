@@ -102,6 +102,24 @@
   }
 }
 
+/* desktop big screen — show social in left col, hide in right col */
+.social-laptop-only {
+  display: none;
+}
+
+.social-desktop-only {
+  display: block;
+}
+
+.right-side-actions {
+  width: 100%;
+}
+
+.greeting-image-inner {
+  width: 100%;
+  max-width: 100%;
+}
+
 /* ✅ MEDIA QUERIES — after base rules so they properly override */
 @media (max-width: 1380px) {
   .greeting-text {
@@ -109,6 +127,49 @@
   }
   .greeting-text-p {
     font-size: 20px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1280px) {
+  /* hide social from left column */
+  .social-desktop-only {
+    display: none;
+  }
+
+  .social-laptop-only {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 12px;
+  }
+
+  .greeting-image-div {
+    width: 100%;
+  }
+
+  .greeting-image-inner {
+    width: 85%;
+    max-width: 85%;
+  }
+
+  .right-side-actions {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 12px;
+  }
+
+  .button-greeting-div {
+    position: static;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 0;
   }
 }
 
