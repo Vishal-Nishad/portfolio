@@ -66,18 +66,33 @@ export default function ExperienceCard({cardInfo, isDark}) {
         >
           {cardInfo.date}
         </h5>
-        <p
-          className={
-            isDark
-              ? "subTitle experience-text-desc dark-mode-text"
-              : "subTitle experience-text-desc"
-          }
-        >
-          {cardInfo.desc}
-        </p>
-        <ul>
-          <GetDescBullets descBullets={cardInfo.descBullets} isDark={isDark} />
-        </ul>
+        <div className="experience-content-scroll">
+          <p
+            className={
+              isDark
+                ? "subTitle experience-text-desc dark-mode-text"
+                : "subTitle experience-text-desc"
+            }
+          >
+            {cardInfo.desc}
+          </p>
+
+          {cardInfo.descBulletsTitle && (
+            <p
+              className={
+                isDark
+                  ? "subTitle experience-text-desc dark-mode-text"
+                  : "subTitle experience-text-desc"
+              }
+            >
+              {cardInfo.descBulletsTitle}
+            </p>
+          )}
+
+          <ul>
+            <GetDescBullets descBullets={cardInfo.descBullets} isDark={isDark} />
+          </ul>
+        </div>
       </div>
     </div>
   );
