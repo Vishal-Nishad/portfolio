@@ -154,3 +154,24 @@
     font-size: 16px;
   }
 }
+
+
+.experience-content-scroll {
+  max-height: 280px;
+  overflow-y: auto;
+  margin-top: 10px;
+  padding-right: 8px;
+}
+
+.experience-content-scroll p {
+  margin-bottom: 10px;
+}
+
+.experience-content-scroll ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.experience-content-scroll li {
+  margin-bottom: 10px;
+}
