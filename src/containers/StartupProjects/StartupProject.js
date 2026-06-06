@@ -53,27 +53,37 @@ export default function StartupProject() {
                     </div>
                   ) : null}
                   <div className="project-detail">
-                    <h5
-                      className={isDark ? "dark-mode card-title" : "card-title"}
-                    >
+                    <h5 className={isDark ? "dark-mode card-title" : "card-title"}>
                       {project.projectName}
                     </h5>
-                    <p
-                      className={
-                        isDark ? "dark-mode card-subtitle" : "card-subtitle"
-                      }
-                    >
-                      {project.projectDesc}
-                    </p>
+
+                    <div className="project-content-scroll">
+                      <p className={isDark ? "dark-mode card-subtitle" : "card-subtitle"}>
+                        {project.projectDesc}
+                      </p>
+
+                      {project.descBulletsTitle && (
+                        <p className={isDark ? "dark-mode card-subtitle" : "card-subtitle"}>
+                          {project.descBulletsTitle}
+                        </p>
+                      )}
+
+                      {project.descBullets && (
+                        <ul className={isDark ? "dark-mode card-subtitle" : "card-subtitle"}>
+                          {project.descBullets.map((item, index) => (
+                            <li key={index}>{item}</li>
+                          ))}
+                        </ul>
+                      )}
+                    </div>
+
                     {project.footerLink ? (
                       <div className="project-card-footer">
                         {project.footerLink.map((link, i) => {
                           return (
                             <span
                               key={i}
-                              className={
-                                isDark ? "dark-mode project-tag" : "project-tag"
-                              }
+                              className={isDark ? "dark-mode project-tag" : "project-tag"}
                               onClick={() => openUrlInNewTab(link.url)}
                             >
                               {link.name}

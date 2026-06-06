@@ -157,10 +157,19 @@
 
 
 .experience-content-scroll {
-  max-height: 280px;
+  max-height: 210px;
   overflow-y: auto;
   margin-top: 10px;
   padding-right: 8px;
+}
+
+@media (max-width: 480px) {
+  .experience-content-scroll {
+    max-height: 295px;
+    overflow-y: auto;
+    margin-top: 10px;
+    padding-right: 8px;
+  }
 }
 
 .experience-content-scroll p {
