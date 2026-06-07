@@ -48,31 +48,68 @@ const socialMediaLinks = {
 // Skills Section
 
 const skillsSection = {
-  title: "Technologies I Work With",
+  title: "Skills",
   subTitle:
   "Backend Engineer focused on scalable cloud-native platforms, distributed systems, and event-driven microservices.",
 
   skills: [
-  emoji(
-  "Programming Languages: Python, SQL, JavaScript, Java, HTML, CSS"
-  ),
-
-  emoji(
-    "Frameworks: FastAPI, Web2Py (MVC), Django, React.js, Pytest, Unittest, Pandas, NumPy"
-  ),
-
-  emoji(
-    "Databases: MySQL, PostgreSQL, MongoDB"
-  ),
-
-  emoji(
-    "Tools & Technologies: AWS (EC2, ECS, Lambda, S3, SNS, SQS, CloudWatch), Git, Docker"
-  ),
-
-  emoji(
-    "Core Skills: REST APIs, OOP, SOLID Principles, Design Patterns, Agile Development"
-  )
-
+    {
+      title: "Programming Languages",
+      items: [
+        {name: "Python", icon: "logos:python"},
+        {name: "SQL", icon: "vscode-icons:file-type-sql"},
+        {name: "JavaScript", icon: "logos:javascript"},
+        {name: "Java", icon: "logos:java"},
+        {name: "HTML", icon: "vscode-icons:file-type-html"},
+        {name: "CSS", icon: "vscode-icons:file-type-css"}
+      ]
+    },
+    {
+      title: "Frameworks",
+      items: [
+        {name: "FastAPI", icon: "logos:fastapi-icon"},
+        {name: "Web2Py", icon: "simple-icons:web2py"},
+        {name: "Django", icon: "logos:django-icon"},
+        {name: "React.js", icon: "logos:react"},
+        {name: "Pytest", icon: "simple-icons:pytest"},
+        {name: "Unittest", icon: "mdi:test-tube"},
+        {name: "Pandas", icon: "simple-icons:pandas"},
+        {name: "NumPy", icon: "simple-icons:numpy"}
+      ]
+    },
+    {
+      title: "Databases",
+      items: [
+        {name: "MySQL", icon: "logos:mysql"},
+        {name: "PostgreSQL", icon: "logos:postgresql"},
+        {name: "MongoDB", icon: "logos:mongodb-icon"}
+      ]
+    },
+    {
+      title: "Tools & Technologies",
+      items: [
+        {name: "AWS", icon: "logos:aws"},
+        {name: "Git", icon: "logos:git-icon"},
+        {name: "Docker", icon: "logos:docker-icon"},
+        {name: "CloudWatch", icon: "simple-icons:amazoncloudwatch"},
+        {name: "Lambda", icon: "simple-icons:awslambda"},
+        {name: "S3", icon: "simple-icons:amazons3"},
+        {name: "SNS", icon: "mdi:message-outline"},
+        {name: "SQS", icon: "mdi:queue"},
+        {name: "EC2", icon: "simple-icons:amazonec2"},
+        {name: "ECS", icon: "simple-icons:amazonecs"}
+      ]
+    },
+    {
+      title: "Core Skills",
+      items: [
+        {name: "REST APIs", icon: "mdi:api"},
+        {name: "OOP", icon: "mdi:language-java"},
+        {name: "SOLID Principles", icon: "mdi:shape-outline"},
+        {name: "Design Patterns", icon: "mdi:vector-arrange-above"},
+        {name: "Agile Development", icon: "mdi:lightning-bolt-outline"}
+      ]
+    }
   ],
 
   softwareSkills: [],
