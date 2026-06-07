@@ -7,10 +7,10 @@ import {
   greeting,
   workExperiences,
   skillsSection,
-  openSource,
+  // openSource,
   bigProjects,
-  blogSection,
-  talkSection,
+  // blogSection,
+  // talkSection,
   achievementSection,
   resumeSection
 } from "../../portfolio";
@@ -18,7 +18,7 @@ import {
 function Header() {
   const {isDark} = useContext(StyleContext);
   const viewExperience = workExperiences.display;
-  const viewBigProjects = bigProjects.display
+  const viewBigProjects = bigProjects.display;
   // const viewOpenSource = openSource.display;
   const viewSkills = skillsSection.display;
   const viewAchievement = achievementSection.display;
