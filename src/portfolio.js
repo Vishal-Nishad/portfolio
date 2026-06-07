@@ -305,7 +305,7 @@ const achievementSection = {
       title: "Python: Beginner to Advanced",
       subtitle:
         "Completed the “Python: Beginner to Advanced” course by CodeBasics, covering core Python programming, OOP concepts, data structures, and advanced problem-solving techniques.",
-      image: require("./assets/images/code_basics.jpg"),
+      image: require("./assets/images/code_basics.png"),
       imageAlt: "",
       footerLink: [
         {
