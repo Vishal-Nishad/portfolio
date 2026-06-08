@@ -233,7 +233,7 @@ const bigProjects = {
       footerLink: [
         {
           name: "Github Repo",
-          url: "http://saayahealth.com/"
+          url: "https://drive.google.com/file/d/139CGZ842wtGDyWA5P6PSLOdsTwibN2YI/view?usp=drivesdk/"
         },
         {
           name: "Visit Website",
@@ -254,7 +254,7 @@ const bigProjects = {
       footerLink: [
         {
           name: "Report Link",
-          url: "http://saayahealth.com/"
+          url: "https://drive.google.com/file/d/139CGZ842wtGDyWA5P6PSLOdsTwibN2YI/view?usp=drivesdk/"
         }
       ]
     },
